@@ -9,4 +9,7 @@ module.exports = {
   transformer: {
     minifierPath: require.resolve('metro-minify-terser'),
   },
+  resolver: {
+    sourceExts: ['js', 'cjs', 'json', 'ts', 'tsx'],
+  },
 };
