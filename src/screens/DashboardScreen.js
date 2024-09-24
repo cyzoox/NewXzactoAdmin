@@ -1127,7 +1127,9 @@ const DashboardScreen = ({navigation}) => {
                   textAlign: 'center',
                   fontWeight: 'bold',
                   color: colors.red,
-                }}></Text>
+                }}>
+                Sales
+              </Text>
               <Text
                 style={{
                   fontSize: 15,

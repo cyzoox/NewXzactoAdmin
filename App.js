@@ -78,6 +78,8 @@ import DeliveryRequestDetails from './src/screens/DeliveryRequestDetails';
 import WarehouseDeliveryRequestLogs from './src/screens/WarehouseDeliveryRequestLogs';
 import WarehouseDeliveryRequestDetails from './src/screens/WarehouseDeliveryRequestDetails';
 import SADashboard from './src/screens/SADashboard';
+import SAStoreScreen from './src/screens/SAStoreScreen';
+import SAStoreDashboard from './src/screens/SAStoreDashboardScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -154,6 +156,23 @@ function SAStackScreen() {
       <HomeStack.Screen
         name="Dashboard"
         component={SADashboard}
+        options={{headerShown: false}}
+      />
+    </HomeStack.Navigator>
+  );
+}
+
+function SAStoreStackScreen() {
+  return (
+    <HomeStack.Navigator>
+      <HomeStack.Screen
+        name="Stores"
+        component={SAStoreScreen}
+        options={{headerShown: false}}
+      />
+      <HomeStack.Screen
+        name="StoreDashboard"
+        component={SAStoreDashboard}
         options={{headerShown: false}}
       />
     </HomeStack.Navigator>
@@ -441,6 +460,7 @@ function TabScreen() {
         inactiveTintColor: 'gray',
       }}>
       <Tab.Screen name="SuperAdmin" component={SAStackScreen} />
+      <Tab.Screen name="Stores" component={SAStoreStackScreen} />
       {/* <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Stores" component={StoreStackScreen} />
       <Tab.Screen name="Warehouse" component={WarehouseStackScreens} /> */}
